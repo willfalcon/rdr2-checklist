@@ -1,0 +1,191 @@
+export const satchels = [
+  {
+    id: 1,
+    name: 'Valuables Satchel',
+    materials: [
+      {
+        id: 1,
+        type: 'Beaver',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 2,
+        type: 'Rabbit',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 3,
+        type: 'Deer',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Materials Satchel',
+    materials: [
+      {
+        id: 4,
+        type: 'Boar',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 5,
+        type: 'Iguana',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 6,
+        type: 'Deer',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Provisions Satchel',
+    materials: [
+      {
+        id: 7,
+        type: 'Bison',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 8,
+        type: 'Raccoon',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 9,
+        type: 'Deer',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: 'Kit Satchel',
+    materials: [
+      {
+        id: 10,
+        type: 'Elk',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 11,
+        type: 'Panther',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 12,
+        type: 'Deer',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: 'Ingredients Satchel',
+    materials: [
+      {
+        id: 13,
+        type: 'Badger',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 14,
+        type: 'Squirrel',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 15,
+        type: 'Deer',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: 'Tonics Satchel',
+    materials: [
+      {
+        id: 16,
+        type: 'Buck',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 17,
+        type: 'Elk',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 18,
+        type: 'Deer',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+    ],
+  },
+  {
+    id: 7,
+    name: 'Legends of the East Satchel',
+    materials: [
+      {
+        id: 19,
+        type: 'Wolf',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 20,
+        type: 'Cougar',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+      {
+        id: 21,
+        type: 'Deer',
+        category: 'pelt',
+        quantity: 1,
+        count: 0,
+      },
+    ],
+  },
+];
