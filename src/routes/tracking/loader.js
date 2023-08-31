@@ -1,4 +1,5 @@
 import { client } from '@/client';
+import { alphabetical } from '../../lib/utils';
 
 export const loader = async store => {
   const { lists, tracking } = store.getState();
@@ -9,7 +10,7 @@ export const loader = async store => {
     `*[_id in $items] {
         _id,
         name,
-        category-> {
+        categories[]-> {
           _id,
           "slug": slug.current,
           name
@@ -55,5 +56,23 @@ export const loader = async store => {
     });
   });
 
-  return { items, materials: materialsList };
+  materialsList.sort(alphabetical);
+  items.sort(alphabetical);
+
+  const joinedItems = items.map(item => {
+    const stateItem = lists.items.find(i => i.id === item._id);
+    const materials = item.materials.map(material => {
+      const mat = stateItem ? stateItem.materials.find(m => m.id === material.material._id) : false;
+      const count = mat ? mat.count : 0;
+      return { ...material, count };
+    });
+
+    return {
+      ...item,
+      materials,
+      tracking: tracking.items.includes(item._id),
+    };
+  });
+
+  return { items: joinedItems, materials: materialsList };
 };

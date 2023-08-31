@@ -1,13 +1,15 @@
-import { Link, useLoaderData, useParams } from 'react-router-dom';
-import ListItem from './ListItem';
+import { useLoaderData } from 'react-router-dom';
+import ListItem from '@/components/ListItem';
+import Back from '@/components/Back';
+import Title from '@/components/Title';
 
 export default function List() {
   const { items, category } = useLoaderData();
 
   return (
     <>
-      <Link to="/">Back</Link>
-      <h1 className="text-2xl font-medium mb-3">{category.name}</h1>
+      <Back />
+      <Title>{category.name}</Title>
 
       {items.map(item => {
         // const isTracking = tracking.includes(satchel.id);

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import Title from '../../components/Title';
 
 export default function Lists() {
   const { vendors } = useLoaderData();
 
   return (
     <>
-      <h1 className="text-4xl font-medium mb-3">Checklists</h1>
+      <Title>Checklists</Title>
       <div>
         <nav>
           <Link className="text-2xl font-medium block mb-3 border-b" to="/tracking">
@@ -30,6 +31,9 @@ export default function Lists() {
               </React.Fragment>
             );
           })}
+          <Link className="text-2xl font-medium block mb-3 border-b" to="/all">
+            All Materials
+          </Link>
         </nav>
       </div>
     </>

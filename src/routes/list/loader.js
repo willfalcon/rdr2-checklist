@@ -1,9 +1,10 @@
 import { client } from '@/client';
+import { alphabetical } from '../../lib/utils';
 
 export const loader = async ({ params }, store) => {
   const { items, category } = await client.fetch(
     `{
-  "items": *[_type == "item" && category->slug.current == $slug] {
+  "items": *[_type == "item" && $slug in categories[]->slug.current] {
   _id,
   name,
   materials[] {
@@ -42,5 +43,6 @@ export const loader = async ({ params }, store) => {
       tracking,
     };
   });
+  joinedItems.sort(alphabetical);
   return { items: joinedItems, category };
 };

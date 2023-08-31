@@ -13,6 +13,9 @@ import ErrorPage from './error-page';
 import Tracking, { loader as trackingLoader, action as trackingAction } from './routes/tracking';
 import Lists, { loader as listsLoader } from './routes/lists';
 import List, { loader as listLoader, action as listAction } from './routes/list';
+import Data from './routes/data';
+import All, { loader as allLoader } from './routes/all';
+import { action as incrementMaterialAction } from './routes/increment';
 
 store.subscribe(
   // we use debounce to save the state once each 800ms
@@ -46,6 +49,19 @@ function getRouter(store) {
           loader: args => listLoader(args, store),
           action: args => listAction(args, store),
         },
+        {
+          path: '/all',
+          element: <All />,
+          loader: allLoader,
+        },
+        {
+          path: '/increment',
+          action: args => incrementMaterialAction(args, store),
+        },
+        // {
+        //   path: 'data',
+        //   element: <Data />,
+        // },
       ],
     },
   ]);
